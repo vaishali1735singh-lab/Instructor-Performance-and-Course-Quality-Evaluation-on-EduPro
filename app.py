@@ -185,6 +185,7 @@ fig4 = px.bar(
 st.plotly_chart(fig4, use_container_width=True)
 
 # Course Level Analysis
+# Course Level Analysis
 st.subheader("🎓 Course Level Analysis")
 
 level_rating = (
@@ -192,6 +193,15 @@ level_rating = (
     .mean()
     .reset_index()
 )
+
+fig5 = px.bar(
+    level_rating,
+    x="Course Level",
+    y="Course Rating",
+    title="Average Course Rating by Level"
+)
+
+st.plotly_chart(fig5, use_container_width=True)
 
 
    
