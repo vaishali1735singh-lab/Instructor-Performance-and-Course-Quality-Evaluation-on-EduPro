@@ -18,6 +18,9 @@ def load_data():
 
 teachers, courses = load_data()
 
+teachers.columns = teachers.columns.str.strip()
+courses.columns = courses.columns.str.strip()
+
 # Dashboard Title
 st.title("📚 EduPro Dashboard")
 st.subheader("Instructor Performance and Course Quality Evaluation")
@@ -91,8 +94,7 @@ col2.metric(
 
 col3.metric(
     "Average Teaching Experience",
-    round(filtered_teachers["Years of Experience"].mean(), 2)
-)
+    round(filtered_teachers.iloc[:, 5].mean(), 2)
 
 col4.metric(
     "Highest Teacher Rating",
