@@ -12,8 +12,8 @@ st.set_page_config(
 # Load data
 @st.cache_data
 def load_data():
-    teachers = pd.read_excel("Book8.xlsx", sheet_name="Sheet1")
-    courses = pd.read_excel("Book8.xlsx", sheet_name="Sheet2")
+    teachers = pd.read_excel("Book 8.xlsx", sheet_name="Sheet1")
+    courses = pd.read_excel("Book 8.xlsx", sheet_name="Sheet2")
     return teachers, courses
 
 teachers, courses = load_data()
