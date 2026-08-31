@@ -193,7 +193,7 @@ level_rating = (
     .reset_index()
 )
 
-fig
+
    
 
 
